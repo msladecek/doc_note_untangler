@@ -25,6 +25,9 @@
     <li><a href="#Example note">Example note</a></li>
     
 
+    <li><a href="#None">None</a></li>
+    
+
     <li><a href="#Building the page">Building the page</a></li>
     
       </ul>
@@ -34,6 +37,37 @@
       
     <div>
         <h2>Example note</h2>
+        <p>Define special <code>doc-note</code> blocks in docstrings and they will be rendered here.
+Markdown is supported.</p>
+<p>You can even do diagrams with <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>:</p>
+<div class="mermaid">
+graph LR
+a --> b
+a --> c
+b --> c
+</div>
+
+<p>Was produced from:</p>
+<div class="codehilite"><pre><span></span><code>::: doc-note Example note
+    Define special `doc-note` blocks in docstrings and they will be rendered here.
+    Markdown is supported.
+
+    You can even do diagrams with [mermaid](https://mermaid-js.github.io/mermaid/#/):
+    ```mermaid
+    graph LR
+        a --&gt; b
+        a --&gt; c
+        b --&gt; c
+    ```
+</code></pre></div>
+
+<script>mermaid.initialize({startOnLoad:true});</script>
+    </div>
+    
+<hr>
+
+    <div>
+        <h2>None</h2>
         <p>Define special <code>doc-note</code> blocks in docstrings and they will be rendered here.
 Markdown is supported.</p>
 <p>You can even do diagrams with <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>:</p>
