@@ -12,7 +12,7 @@
     }
     </style>
     
-    <title>Docstring Notes Documentation Notes</title>
+    <title>Docstring Notes</title>
   </head>
   <body>
     <main>
@@ -22,13 +22,13 @@
       <h2>Contents</h2>
       <ul>
         
-    <li><a href="#Example note">Example note</a></li>
+    <li><a href="# Example note"> Example note</a></li>
     
 
-    <li><a href="#None">None</a></li>
+    <li><a href="# Another Example note"> Another Example note</a></li>
     
 
-    <li><a href="#Building the page">Building the page</a></li>
+    <li><a href="# Building the page"> Building the page</a></li>
     
       </ul>
     </div>
@@ -36,7 +36,7 @@
       <hr>
       
     <div>
-        <h2>Example note</h2>
+        <h2> Example note</h2>
         <p>Define special <code>doc-note</code> blocks in docstrings and they will be rendered here.
 Markdown is supported.</p>
 <p>You can even do diagrams with <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>:</p>
@@ -67,38 +67,43 @@ b --> c
 <hr>
 
     <div>
-        <h2>None</h2>
-        <p>Define special <code>doc-note</code> blocks in docstrings and they will be rendered here.
-Markdown is supported.</p>
-<p>You can even do diagrams with <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>:</p>
-<div class="mermaid">
-graph LR
-a --> b
-a --> c
-b --> c
-</div>
+        <h2> Another Example note</h2>
+        <p>There can be multiple notes in a single docstring.</p>
+<p>Here's some cool python code and a table as a bonus:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
 
-<p>Was produced from:</p>
-<div class="codehilite"><pre><span></span><code>::: doc-note Example note
-    Define special `doc-note` blocks in docstrings and they will be rendered here.
-    Markdown is supported.
-
-    You can even do diagrams with [mermaid](https://mermaid-js.github.io/mermaid/#/):
-    ```mermaid
-    graph LR
-        a --&gt; b
-        a --&gt; c
-        b --&gt; c
-    ```
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 </code></pre></div>
 
-<script>mermaid.initialize({startOnLoad:true});</script>
+<table>
+<thead>
+<tr>
+<th>ascii</th>
+<th>nato</th>
+<th>talon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W</td>
+<td>whiskey</td>
+<td>whale</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>quebec</td>
+<td>quench</td>
+</tr>
+</tbody>
+</table>
     </div>
     
 <hr>
 
     <div>
-        <h2>Building the page</h2>
+        <h2> Building the page</h2>
         <p>Notes are untangled from source files and rendered as markdown.
 Diagrams are rendered by <a href="https://mermaid-js.github.io/mermaid/#/">mermaid.js</a>.
 Page is styled with <a href="https://andybrewer.github.io/mvp/">mvp.css</a>.</p>
