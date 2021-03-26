@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="./pygments_styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+    
+    <style>
+    pre > span > code {
+        background: white;
+        border: 1px solid black;
+    }
+    </style>
+    
+    <title>Docstring Notes Documentation Notes</title>
+  </head>
+  <body>
+    <main>
+      <h1>Notes</h1>
+      
+    <div>
+      <h2>Contents</h2>
+      <ul>
+        
+    <li><a href="#Example note">Example note</a></li>
+    
+
+    <li><a href="#Building the page">Building the page</a></li>
+    
+      </ul>
+    </div>
+    
+      <hr>
+      
+    <div>
+        <h2>Example note</h2>
+        <p>Define special <code>doc-note</code> blocks in docstrings and they will be rendered here.
+Markdown is supported.</p>
+<p>You can even do diagrams with <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>:</p>
+<div class="mermaid">
+graph LR
+a --> b
+a --> c
+b --> c
+</div>
+
+<p>Was produced from:</p>
+<div class="codehilite"><pre><span></span><code>::: doc-note Example note
+    Define special `doc-note` blocks in docstrings and they will be rendered here.
+    Markdown is supported.
+
+    You can even do diagrams with [mermaid](https://mermaid-js.github.io/mermaid/#/):
+    ```mermaid
+    graph LR
+        a --&gt; b
+        a --&gt; c
+        b --&gt; c
+    ```
+</code></pre></div>
+
+<script>mermaid.initialize({startOnLoad:true});</script>
+    </div>
+    
+<hr>
+
+    <div>
+        <h2>Building the page</h2>
+        <p>Notes are untangled from source files and rendered as markdown.
+Diagrams are rendered by <a href="https://mermaid-js.github.io/mermaid/#/">mermaid.js</a>.
+Page is styled with <a href="https://andybrewer.github.io/mvp/">mvp.css</a>.</p>
+<p>It looks a bit like this:</p>
+<div class="mermaid">
+flowchart LR;
+subgraph "source files"
+src1.py
+src2.py
+other_src.py[....py]
+end
+
+untangler([untangler])
+
+src1.py --> untangler
+src2.py --> untangler
+other_src.py --> untangler
+
+subgraph "external resources"
+mermaid([mermaid.js])
+mvp([mvp.css])
+cdn((cdn))
+mermaid --> cdn
+mvp --> cdn
+end
+
+untangler --> index.html
+cdn --> index.html
+</div>
+
+<script>mermaid.initialize({startOnLoad:true});</script>
+    </div>
+    
+    </main>
+  </body>
+</html>
