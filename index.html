@@ -24,12 +24,6 @@
         
     <li><a href="# Example note"> Example note</a></li>
     
-
-    <li><a href="# Another Example note"> Another Example note</a></li>
-    
-
-    <li><a href="# Building the page"> Building the page</a></li>
-    
       </ul>
     </div>
     
@@ -60,79 +54,6 @@ b --> c
         b --&gt; c
     ```
 </code></pre></div>
-
-<script>mermaid.initialize({startOnLoad:true});</script>
-    </div>
-    
-<hr>
-
-    <div>
-        <h2> Another Example note</h2>
-        <p>There can be multiple notes in a single docstring.</p>
-<p>Here's some cool python code and a table as a bonus:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
-<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
-
-<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-</code></pre></div>
-
-<table>
-<thead>
-<tr>
-<th>ascii</th>
-<th>nato</th>
-<th>talon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>W</td>
-<td>whiskey</td>
-<td>whale</td>
-</tr>
-<tr>
-<td>Q</td>
-<td>quebec</td>
-<td>quench</td>
-</tr>
-</tbody>
-</table>
-    </div>
-    
-<hr>
-
-    <div>
-        <h2> Building the page</h2>
-        <p>Notes are untangled from source files and rendered as markdown.
-Diagrams are rendered by <a href="https://mermaid-js.github.io/mermaid/#/">mermaid.js</a>.
-Page is styled with <a href="https://andybrewer.github.io/mvp/">mvp.css</a>.</p>
-<p>It looks a bit like this:</p>
-<div class="mermaid">
-flowchart LR;
-subgraph "source files"
-src1.py
-src2.py
-other_src.py[....py]
-end
-
-untangler([untangler])
-
-src1.py --> untangler
-src2.py --> untangler
-other_src.py --> untangler
-
-subgraph "external resources"
-mermaid([mermaid.js])
-mvp([mvp.css])
-cdn((cdn))
-mermaid --> cdn
-mvp --> cdn
-end
-
-untangler --> index.html
-cdn --> index.html
-</div>
 
 <script>mermaid.initialize({startOnLoad:true});</script>
     </div>
